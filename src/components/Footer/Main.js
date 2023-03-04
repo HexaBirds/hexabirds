@@ -33,7 +33,7 @@ const Footer = () => {
                 </Link>
                 <p className="footer-widget__text">
                   We work with a passion of taking challenges and creating new
-                  ones in advertising sector.
+                  ones in development sector.
                 </p>
                 <ul className="footer-widget__social">
                   <li>
@@ -80,19 +80,16 @@ const Footer = () => {
                 <h3 className="footer-widget__title">Services</h3>
                 <ul className="footer-widget__links">
                   <li>
-                    <Link to="/cyber-security">Cyber Security</Link>
+                    <Link to="/web-dev">Web Development</Link>
                   </li>
                   <li>
-                    <Link to="/it-management">IT Management</Link>
+                    <Link to="/apps-dev">App Development</Link>
                   </li>
                   <li>
-                    <Link to="/qa-testing">QA & Testing</Link>
+                    <Link to="/ux-design">UI/UX Design</Link>
                   </li>
                   <li>
-                    <Link to="/infrastructure-plan">Infrastructure Plan</Link>
-                  </li>
-                  <li>
-                    <Link to="/it-consultant">IT Consultent</Link>
+                    <Link to="/cms-dev">CMS Development</Link>
                   </li>
                 </ul>
               </div>

@@ -1,12 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel";
-import BG1 from "../../assets/images/background/cta-two-bg-1-1.jpg";
+
 import BG2 from "../../assets/images/shapes/testi-bg-1-1.png";
 import Breadcumb from "../Breadcumb/Main";
 import { Parallax } from "react-parallax";
-import client1 from "../../assets/images/resources/testi-1-1.jpg";
-
+import client1 from "../../assets/images/resources/client1.jpg";
+import aboutteam from "../../assets/images/resources/about-team.png";
+import poonam from "../../assets/images/resources/poonam.png";
+import servicebg from "../../assets/images/background/servicebg.png";
+import vikash from "../../assets/images/team/vikash.png";
+import nisha from "../../assets/images/team/Nisha.png";
+import sahil from "../../assets/images/team/sahil2.png";
+import joginder from "../../assets/images/team/joginder.png";
+import aashu from "../../assets/images/team/Aashu.png";
+import rakesh from "../../assets/images/team/rakesh.png";
 const About = () => {
   const logoOptions = {
     loop: true,
@@ -58,7 +66,7 @@ const About = () => {
             <div className="col-lg-6">
               <div className="about-four__image">
                 <img
-                  src="assets/images/resources/about-four-1-1.jpg"
+                  src={aboutteam}
                   className="wow fadeInUp"
                   data-wow-duration="1500ms"
                   alt=""
@@ -74,30 +82,25 @@ const About = () => {
                   </h2>
                 </div>
                 <div className="about-four__text">
-                  Since from 2000 Building Your Better IT Solution The
-                  definition of business is an occupation or trade & the
-                  purchase and sale of products Our Mission & Vision Voice and
-                  Data System are crucial to the success.
+                  Our software company is a leading provider of innovative
+                  software solutions for businesses of all sizes. We specialize
+                  in developing software applications that help organizations
+                  streamline their operations, increase productivity, and
+                  improve their bottom line.
                 </div>
 
                 <div className="about-four__meta">
                   <div className="about-four__author">
-                    <img
-                      src="assets/images/resources/about-four-author-1.jpg"
-                      alt=""
-                    />
+                    <img src={poonam} width="80" height="80 " alt="poonam" />
                     <div className="about-four__author__content">
                       <h3 className="about-four__author__title">
-                        Michele Morrone
+                        Poonam Sheoran
                       </h3>
                       <div className="about-four__author__designation">
                         Founder CEO
                       </div>
                     </div>
                   </div>
-                  <Link to="/service-01" className="thm-btn about-four__btn">
-                    <span>Learn More</span>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -113,14 +116,14 @@ const About = () => {
             </h2>
           </div>
           <div className="row gutter-y-30">
-            <div className="col-lg-3 col-md-6 col-sm-12">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <div
                 className="team-card-one wow fadeInUp"
                 data-wow-duration="1500ms"
                 data-wow-delay="000ms"
               >
                 <div className="team-card-one__image">
-                  <img src="assets/images/team/team-2-1.jpg" alt="" />
+                  <img src={joginder} alt="joginder" />
                   <div className="team-card-one__social">
                     <ul className="team-card-one__social__links">
                       <li>
@@ -133,11 +136,7 @@ const About = () => {
                           <i className="fab fa-facebook"></i>
                         </Link>
                       </li>
-                      <li>
-                        <Link to="#">
-                          <i className="fab fa-pinterest-p"></i>
-                        </Link>
-                      </li>
+                      {/* <li><Link to="#"><i className="fab fa-pinterest-p"></i></Link></li> */}
                       <li>
                         <Link to="#">
                           <i className="fab fa-instagram"></i>
@@ -151,20 +150,23 @@ const About = () => {
                 </div>
                 <div className="team-card-one__content">
                   <h3 className="team-card-one__title">
-                    <Link to="#">Michelle Monaghan</Link>
+                    <Link to="#">Joginder Saini</Link>
                   </h3>
-                  <p className="team-card-one__designation">Designer</p>
+
+                  <p className="team-card-one__designation">
+                    App Developer & Designer
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <div
                 className="team-card-one wow fadeInUp"
                 data-wow-duration="1500ms"
                 data-wow-delay="100ms"
               >
                 <div className="team-card-one__image">
-                  <img src="assets/images/team/team-2-2.jpg" alt="" />
+                  <img src={rakesh} alt="rakesh" />
                   <div className="team-card-one__social">
                     <ul className="team-card-one__social__links">
                       <li>
@@ -177,11 +179,7 @@ const About = () => {
                           <i className="fab fa-facebook"></i>
                         </Link>
                       </li>
-                      <li>
-                        <Link to="#">
-                          <i className="fab fa-pinterest-p"></i>
-                        </Link>
-                      </li>
+                      {/* <li><Link to="#"><i className="fab fa-pinterest-p"></i></Link></li> */}
                       <li>
                         <Link to="#">
                           <i className="fab fa-instagram"></i>
@@ -195,20 +193,23 @@ const About = () => {
                 </div>
                 <div className="team-card-one__content">
                   <h3 className="team-card-one__title">
-                    <Link to="#">Jessica Brown</Link>
+                    <Link to="#">Rakesh Sheoran</Link>
                   </h3>
-                  <p className="team-card-one__designation">Manager</p>
+
+                  <p className="team-card-one__designation">
+                    Front-End Developer & UI/UX Designer
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <div
                 className="team-card-one wow fadeInUp"
                 data-wow-duration="1500ms"
                 data-wow-delay="200ms"
               >
                 <div className="team-card-one__image">
-                  <img src="assets/images/team/team-2-3.jpg" alt="" />
+                  <img src={sahil} alt="sahil boora" />
                   <div className="team-card-one__social">
                     <ul className="team-card-one__social__links">
                       <li>
@@ -221,11 +222,7 @@ const About = () => {
                           <i className="fab fa-facebook"></i>
                         </Link>
                       </li>
-                      <li>
-                        <Link to="#">
-                          <i className="fab fa-pinterest-p"></i>
-                        </Link>
-                      </li>
+                      {/* <li><Link to="#"><i className="fab fa-pinterest-p"></i></Link></li> */}
                       <li>
                         <Link to="#">
                           <i className="fab fa-instagram"></i>
@@ -239,20 +236,21 @@ const About = () => {
                 </div>
                 <div className="team-card-one__content">
                   <h3 className="team-card-one__title">
-                    <Link to="#">Kevin Martin</Link>
+                    <Link to="#">Sahil Boora</Link>
                   </h3>
-                  <p className="team-card-one__designation">Developer</p>
+
+                  <p className="team-card-one__designation">App Developer</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <div
                 className="team-card-one wow fadeInUp"
                 data-wow-duration="1500ms"
                 data-wow-delay="300ms"
               >
                 <div className="team-card-one__image">
-                  <img src="assets/images/team/team-2-4.jpg" alt="" />
+                  <img src={nisha} alt="nisha" />
                   <div className="team-card-one__social">
                     <ul className="team-card-one__social__links">
                       <li>
@@ -265,11 +263,7 @@ const About = () => {
                           <i className="fab fa-facebook"></i>
                         </Link>
                       </li>
-                      <li>
-                        <Link to="#">
-                          <i className="fab fa-pinterest-p"></i>
-                        </Link>
-                      </li>
+                      {/* <li><Link to="#"><i className="fab fa-pinterest-p"></i></Link></li> */}
                       <li>
                         <Link to="#">
                           <i className="fab fa-instagram"></i>
@@ -283,18 +277,106 @@ const About = () => {
                 </div>
                 <div className="team-card-one__content">
                   <h3 className="team-card-one__title">
-                    <Link to="#">Sarah Albert</Link>
+                    <Link to="#">Nisha Saini</Link>
                   </h3>
-                  <p className="team-card-one__designation">Director</p>
+
+                  <p className="team-card-one__designation">App Developer</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <div
+                className="team-card-one wow fadeInUp"
+                data-wow-duration="1500ms"
+                data-wow-delay="400ms"
+              >
+                <div className="team-card-one__image">
+                  <img src={aashu} alt="aashu" />
+                  <div className="team-card-one__social">
+                    <ul className="team-card-one__social__links">
+                      <li>
+                        <Link to="#">
+                          <i className="fab fa-twitter"></i>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <i className="fab fa-facebook"></i>
+                        </Link>
+                      </li>
+                      {/* <li><Link to="#"><i className="fab fa-pinterest-p"></i></Link></li> */}
+                      <li>
+                        <Link to="#">
+                          <i className="fab fa-instagram"></i>
+                        </Link>
+                      </li>
+                    </ul>
+                    <div className="team-card-one__social__icon">
+                      <i className="fa fa-share-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <div className="team-card-one__content">
+                  <h3 className="team-card-one__title">
+                    <Link to="#">Aashu Saini</Link>
+                  </h3>
+
+                  <p className="team-card-one__designation">
+                    Front-End Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <div
+                className="team-card-one wow fadeInUp"
+                data-wow-duration="1500ms"
+                data-wow-delay="500ms"
+              >
+                <div className="team-card-one__image">
+                  <img src={vikash} alt="vikash" />
+                  <div className="team-card-one__social">
+                    <ul className="team-card-one__social__links">
+                      <li>
+                        <Link to="#">
+                          <i className="fab fa-twitter"></i>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <i className="fab fa-facebook"></i>
+                        </Link>
+                      </li>
+                      {/* <li><Link to="#"><i className="fab fa-pinterest-p"></i></Link></li> */}
+                      <li>
+                        <Link to="#">
+                          <i className="fab fa-instagram"></i>
+                        </Link>
+                      </li>
+                    </ul>
+                    <div className="team-card-one__social__icon">
+                      <i className="fa fa-share-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <div className="team-card-one__content">
+                  <h3 className="team-card-one__title">
+                    <Link to="#">Vikash Boora</Link>
+                  </h3>
+
+                  <p className="team-card-one__designation">
+                    Full Stack Developer
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section className="black-bg cta-two">
         <Parallax
-          bgImage={BG1}
+          bgImage={servicebg}
           bgImageAlt=""
           className="cta-two__bg section-padding-lg--top section-padding-lg--bottom"
           strength={300}
@@ -311,7 +393,7 @@ const About = () => {
           </div>
         </Parallax>
       </section>
-      <section
+      {/* <section
         className="section-padding--bottom section-padding--top testimonials-two background-repeat-no background-position-top-center"
         style={{ backgroundImage: `url(${BG2})` }}
       >
@@ -403,8 +485,8 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
-      <div className="client-carousel client-carousel--two">
+      </section> */}
+      {/* <div className="client-carousel client-carousel--two">
         <div className="container">
           <OwlCarousel className="thm-owl__carousel" {...logoOptions}>
             <div className="item">
@@ -469,7 +551,7 @@ const About = () => {
             </div>
           </OwlCarousel>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

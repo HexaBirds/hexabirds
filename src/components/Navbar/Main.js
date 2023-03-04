@@ -21,21 +21,23 @@ const Navbar = () => {
   const activeMenu = () => {
     if (path === "/") {
       setmenu({ home: true });
-    } else if (path === "/about" || path === "/team") {
+    } else if (path === "/about") {
       setmenu({ pages: true });
     } else if (
-      path === "/service-01" ||
-      path === "/service-02" ||
-      path === "qa-testing" ||
-      path === "/it-management" ||
-      path === "cyber-security" ||
-      path === "/it-consultant" ||
-      path === "/infrastructure-plan"
+      path === "/apps-dev" ||
+      path === "/web-dev" ||
+      path === "/ux-design" ||
+      path === "/cms-dev"
     ) {
       setmenu({ services: true });
-    } else if (path === "/projects" || path === "/project-details") {
+    } else if (path === "/project-details") {
       setmenu({ project: true });
-    } else if (path === "/blog" || path === "/blog-details") {
+    } else if (
+      path === "/blog" ||
+      path === "/web-design" ||
+      path === "/cyber" ||
+      path === "/app-development"
+    ) {
       setmenu({ blog: true });
     } else if (path === "/contact") {
       setmenu({ contact: true });
@@ -140,43 +142,26 @@ const Navbar = () => {
               <li
                 className={`menu-item-has-children ${menu.pages && "current"}`}
               >
-                <Link to="/about">Pages</Link>
-                <ul>
-                  <li>
-                    <Link to="/about">About Us</Link>
-                  </li>
-                  <li>
-                    <Link to="/team">Our Team</Link>
-                  </li>
-                </ul>
+                <Link to="/about">About Us</Link>
               </li>
               <li
                 className={`menu-item-has-children ${
                   menu.services && "current"
                 }`}
               >
-                <Link to="/service-01">Services</Link>
+                <Link to="/web-dev">Services</Link>
                 <ul>
                   <li>
-                    <Link to="/service-01">Services 01</Link>
+                    <Link to="/web-dev">Web Development</Link>
                   </li>
                   <li>
-                    <Link to="/service-02">Services 02</Link>
+                    <Link to="/apps-dev">App Development</Link>
                   </li>
                   <li>
-                    <Link to="/cyber-security">Cyber Security</Link>
+                    <Link to="/ux-design">UI/UX Design</Link>
                   </li>
                   <li>
-                    <Link to="/it-management">IT Management</Link>
-                  </li>
-                  <li>
-                    <Link to="/qa-testing">QA & Testing</Link>
-                  </li>
-                  <li>
-                    <Link to="/infrastructure-plan">Infrastructure Plan</Link>
-                  </li>
-                  <li>
-                    <Link to="/it-consultant">IT Consultant</Link>
+                    <Link to="/cms-dev">CMS Development</Link>
                   </li>
                 </ul>
               </li>
@@ -185,28 +170,12 @@ const Navbar = () => {
                   menu.project && "current"
                 }`}
               >
-                <Link to="/projects">Projects</Link>
-                <ul>
-                  <li>
-                    <Link to="/projects">Projects</Link>
-                  </li>
-                  <li>
-                    <Link to="/project-details">Projects Details</Link>
-                  </li>
-                </ul>
+                <Link to="/project-details">Projects</Link>
               </li>
               <li
                 className={`menu-item-has-children ${menu.blog && "current"}`}
               >
                 <Link to="/blog">Blog</Link>
-                <ul>
-                  <li>
-                    <Link to="/blog">Blog</Link>
-                  </li>
-                  <li>
-                    <Link to="/blog-details">Blog Details</Link>
-                  </li>
-                </ul>
               </li>
               <li
                 className={`menu-item-has-children ${
@@ -303,33 +272,19 @@ const Navbar = () => {
                     menu.pages ? "current" : ""
                   }`}
                 >
-                  <Link to="#" className={pages ? "expanded" : ""}>
-                    Pages
-                    <button
-                      aria-label="dropdown toggler"
-                      onClick={() => setpages(!pages)}
-                      className={pages ? "expanded" : ""}
-                    >
-                      <i className="fa fa-angle-down"></i>
-                    </button>
+                  <Link to="/about" className={pages ? "expanded" : ""}>
+                    About-Us
                   </Link>
-                  {pages && (
-                    <ul style={{ display: "block" }}>
-                      <li>
-                        <Link to="/about">About Us</Link>
-                      </li>
-                      <li>
-                        <Link to="/team">Our Team</Link>
-                      </li>
-                    </ul>
-                  )}
                 </li>
                 <li
                   className={`menu-item-has-children ${
                     menu.services ? "current" : ""
                   }`}
                 >
-                  <Link to="#" className={service ? "expanded" : ""}>
+                  <Link
+                    to="/web-development"
+                    className={service ? "expanded" : ""}
+                  >
                     Services
                     <button
                       aria-label="dropdown toggler"
@@ -342,27 +297,16 @@ const Navbar = () => {
                   {service && (
                     <ul style={{ display: "block" }}>
                       <li>
-                        <Link to="/service-01">Services 01</Link>
+                        <Link to="/web-development">WEB DEVElOPMENT</Link>
                       </li>
                       <li>
-                        <Link to="/service-02">Services 02</Link>
+                        <Link to="/apps-development">APP DEVELOPMENT</Link>
                       </li>
                       <li>
-                        <Link to="/cyber-security">Cyber Security</Link>
+                        <Link to="/ux-design">UI/UX DESIGN</Link>
                       </li>
                       <li>
-                        <Link to="/it-management">IT Management</Link>
-                      </li>
-                      <li>
-                        <Link to="/qa-testing">QA &amp; Testing</Link>
-                      </li>
-                      <li>
-                        <Link to="/infrastructure-plan">
-                          Infrastructure Plan
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/it-consultent">IT Consultent</Link>
+                        <Link to="/cms-development">CMS DEVELOPMENT</Link>
                       </li>
                     </ul>
                   )}
@@ -372,52 +316,22 @@ const Navbar = () => {
                     menu.project ? "current" : ""
                   }`}
                 >
-                  <Link to="#" className={project ? "expanded" : ""}>
+                  <Link
+                    to="/project-details"
+                    className={project ? "expanded" : ""}
+                  >
                     Projects
-                    <button
-                      aria-label="dropdown toggler"
-                      onClick={() => setproject(!project)}
-                      className={project ? "expanded" : ""}
-                    >
-                      <i className="fa fa-angle-down"></i>
-                    </button>
                   </Link>
-                  {project && (
-                    <ul style={{ display: "block" }}>
-                      <li>
-                        <Link to="/projects">Projects</Link>
-                      </li>
-                      <li>
-                        <Link to="/project-details">Projects Details</Link>
-                      </li>
-                    </ul>
-                  )}
                 </li>
                 <li
                   className={`menu-item-has-children ${
                     menu.blog ? "current" : ""
                   }`}
                 >
-                  <Link to="#" className={blog ? "expanded" : ""}>
+                  <Link to="/blog" className={blog ? "expanded" : ""}>
                     Blog
-                    <button
-                      aria-label="dropdown toggler"
-                      onClick={() => setblog(!blog)}
-                      className={blog ? "expanded" : ""}
-                    >
-                      <i className="fa fa-angle-down"></i>
-                    </button>
                   </Link>
-                  {blog && (
-                    <ul style={{ display: "block" }}>
-                      <li>
-                        <Link to="/blog">Blog</Link>
-                      </li>
-                      <li>
-                        <Link to="/blog-details">Blog Details</Link>
-                      </li>
-                    </ul>
-                  )}
+                  {blog && <ul style={{ display: "block" }}></ul>}
                 </li>
                 <li>
                   <Link to="/contact">Contact</Link>

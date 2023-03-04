@@ -12,9 +12,15 @@ import serviceimg1 from "../../assets/images/services/service-1-1.png";
 import serviceimg2 from "../../assets/images/services/service-1-2.jpg";
 import serviceimg3 from "../../assets/images/services/service-1-3.jpg";
 import contact from "../../assets/images/resources/contact-two-1.jpg";
-import client1 from "../../assets/images/resources/testi-1-1.jpg";
-import project1 from "../../assets/images/projects/project-1-1.png";
-
+import client1 from "../../assets/images/resources/client1.jpg";
+import client2 from "../../assets/images/resources/client2.jpg";
+import project1 from "../../assets/images/projects/project-1.png";
+import project2 from "../../assets/images/projects/project-2.png";
+import project3 from "../../assets/images/projects/project3.png";
+import project4 from "../../assets/images/projects/project4.png";
+import designl from "../../assets/images/blog/designl.png";
+import cyberl from "../../assets/images/blog/cyberl.png";
+import logicl from "../../assets/images/blog/logicl.png";
 const Home3 = () => {
   const [ytShow, setytShow] = useState(false);
   const [sticky, setSticky] = useState(false);
@@ -29,6 +35,10 @@ const Home3 = () => {
   const isSticky = () => {
     const scrollTop = window.scrollY;
     scrollTop >= 141 ? setSticky(true) : setSticky(false);
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`Thank you for contact us`);
   };
   const logoOptions = {
     loop: true,
@@ -150,6 +160,7 @@ const Home3 = () => {
       },
     },
   };
+
   return (
     <>
       <div className="slider-one slider-three">
@@ -287,10 +298,12 @@ const Home3 = () => {
                   </h2>
                 </div>
                 <div className="about-six__text">
-                  System is a term used to refer to an organized collection
-                  symbols and processes that may be used to operate on such
-                  symbols. Perspiciatis unde omnis natus error voluptatems
-                  accusa.
+                  Welcome to our IT company! We are delighted to have you here
+                  and excited to introduce you to the innovative technologies
+                  and solutions that we offer. Our team of skilled professionals
+                  is dedicated to providing high-quality services that meet the
+                  needs of our clients, and we are committed to delivering the
+                  best results possible.
                 </div>
                 <ul className="about-six__list">
                   <li className="about-six__list__item">
@@ -328,10 +341,6 @@ const Home3 = () => {
                   <Link to="/about" className="thm-btn">
                     <span>learn more</span>
                   </Link>
-                  <Link to="/service-01" className="about-six__link">
-                    How it Work
-                    <i className="fa fa-angle-double-right"></i>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -357,7 +366,7 @@ const Home3 = () => {
             <div className="row">
               <div className="col-lg-7">
                 <div className="section-title">
-                  <p className="section-title__text">What We offier</p>
+                  <p className="section-title__text">What We offers</p>
                   <h2 className="section-title__title section-title__title--light">
                     Help you Overcome your Technology Challenges
                   </h2>
@@ -365,8 +374,7 @@ const Home3 = () => {
               </div>
               <div className="col-lg-5">
                 <div className="service-three__block__text">
-                  Accusa ntium doloremque laudantium totam rem aperiamea queipsa
-                  quae abillo inventore veritatis.
+                  Get a single platform with all the solutions.
                 </div>
               </div>
             </div>
@@ -409,7 +417,7 @@ const Home3 = () => {
             >
               <i className="icon-iot service-three__list__icon"></i>
               <h3 className="service-three__list__title">
-                <Link to="#">IOT</Link>
+                <Link to="#">Networking</Link>
               </h3>
             </li>
             <li
@@ -419,7 +427,7 @@ const Home3 = () => {
             >
               <i className="icon-smartband service-three__list__icon"></i>
               <h3 className="service-three__list__title">
-                <Link to="#">Wearalables</Link>
+                <Link to="#">Maintenance</Link>
               </h3>
             </li>
             <li
@@ -429,7 +437,7 @@ const Home3 = () => {
             >
               <i className="icon-tv service-three__list__icon"></i>
               <h3 className="service-three__list__title">
-                <Link to="#">TV</Link>
+                <Link to="#">Design's</Link>
               </h3>
             </li>
           </ul>
@@ -476,8 +484,8 @@ const Home3 = () => {
                     <Link to="/cyber-security">Web Development</Link>
                   </h3>
                   <p className="service-card-one__text">
-                    Lorem Ipsum is dummy text of the new design printng and type
-                    setting Ipsum has been the is industrys.
+                    We offers web dev services and provides professional
+                    assistance to organizations to improve websites.
                   </p>
                 </div>
               </div>
@@ -493,8 +501,8 @@ const Home3 = () => {
                     <Link to="/cyber-security">App Development</Link>
                   </h3>
                   <p className="service-card-one__text">
-                    Lorem Ipsum is dummy text of the new design printng and type
-                    setting Ipsum has been the is industrys.
+                    Looking for a reliable app development service provider to
+                    bring your app idea to life? Look no further!
                   </p>
                 </div>
               </div>
@@ -509,8 +517,9 @@ const Home3 = () => {
                     <Link to="/cyber-security">UI/UX Design</Link>
                   </h3>
                   <p className="service-card-one__text">
-                    Lorem Ipsum is dummy text of the new design printng and type
-                    setting Ipsum has been the is industrys.
+                    We specialize in creating stunning, user-friendly websites
+                    that will help you stand out in today's crowded digital
+                    marketplace.
                   </p>
                 </div>
               </div>
@@ -553,7 +562,7 @@ const Home3 = () => {
             <div className="col-lg-6">
               <div className="testimonials-one-card">
                 <div className="testimonials-one-card__image">
-                  <img src="assets/images/resources/testi-1-2.jpg" alt="" />
+                  <img src={client2} width="100" height="100" alt="client 2" />
                 </div>
                 <div className="testimonials-one-card__content">
                   <div className="testimonials-one-card__text">
@@ -563,11 +572,9 @@ const Home3 = () => {
                     little thing. They ask for permission before proceeding and
                     deliver an amazing service. Great job!
                   </div>
-                  <h3 className="testimonials-one-card__title">
-                    Sandeep Banga
-                  </h3>
+                  <h3 className="testimonials-one-card__title">Leti broce</h3>
                   <p className="testimonials-one-card__designation">
-                    Owner - SK Steel Fabrications
+                    Fashion Designer
                   </p>
                   <i className="icon-right-quote testimonials-one-card__icon"></i>
                 </div>
@@ -588,7 +595,7 @@ const Home3 = () => {
             <div className="item">
               <div className="project-card-one">
                 <div className="project-card-one__image">
-                  <img src={project1} alt="" />
+                  <img src={project1} alt="primefixx" />
                 </div>
                 <div className="project-card-one__content">
                   <div className="project-card-one__content__inner">
@@ -611,18 +618,15 @@ const Home3 = () => {
             <div className="item">
               <div className="project-card-one">
                 <div className="project-card-one__image">
-                  <img
-                    src="assets/images/projects/project-2-2.jpg"
-                    alt="hexabirds"
-                  />
+                  <img src={project2} alt="elon musk vision" />
                 </div>
                 <div className="project-card-one__content">
                   <div className="project-card-one__content__inner">
                     <p className="project-card-one__text">
-                      A Complete Vehicle Assistance
+                      All News About Elon Musk
                     </p>
                     <h3 className="project-card-one__title">
-                      <Link to="/project-details">Primefixx</Link>
+                      <Link to="/project-details">Elon Musk Vision</Link>
                     </h3>
                     <Link
                       to="/project-details"
@@ -637,15 +641,15 @@ const Home3 = () => {
             <div className="item">
               <div className="project-card-one">
                 <div className="project-card-one__image">
-                  <img src="assets/images/projects/project-2-3.jpg" alt="" />
+                  <img src={project3} alt="edu app" />
                 </div>
                 <div className="project-card-one__content">
                   <div className="project-card-one__content__inner">
                     <p className="project-card-one__text">
-                      IT Technology Solution
+                      Complete Solution For Students
                     </p>
                     <h3 className="project-card-one__title">
-                      <Link to="/project-details">Data Recovery Analysis</Link>
+                      <Link to="/project-details">Edu App</Link>
                     </h3>
                     <Link
                       to="/project-details"
@@ -660,15 +664,15 @@ const Home3 = () => {
             <div className="item">
               <div className="project-card-one">
                 <div className="project-card-one__image">
-                  <img src="assets/images/projects/project-2-4.jpg" alt="" />
+                  <img src={project4} alt="edumato" />
                 </div>
                 <div className="project-card-one__content">
                   <div className="project-card-one__content__inner">
                     <p className="project-card-one__text">
-                      IT Technology Solution
+                      All Schools And Institute On A Single Platform
                     </p>
                     <h3 className="project-card-one__title">
-                      <Link to="/project-details">Data Recovery Analysis</Link>
+                      <Link to="/project-details">Edumato</Link>
                     </h3>
                     <Link
                       to="/project-details"
@@ -680,7 +684,7 @@ const Home3 = () => {
                 </div>
               </div>
             </div>
-            <div className="item">
+            {/* <div className="item">
               <div className="project-card-one">
                 <div className="project-card-one__image">
                   <img src="assets/images/projects/project-2-1.jpg" alt="" />
@@ -724,8 +728,8 @@ const Home3 = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </OwlCarousel>
         </div>
       </section>
@@ -763,7 +767,7 @@ const Home3 = () => {
                   </h2>
                 </div>
                 <form
-                  action="assets/inc/sendemail.php"
+                  action={handleSubmit}
                   className="contact-one__form contact-form-validated"
                 >
                   <div className="row ">
@@ -827,25 +831,25 @@ const Home3 = () => {
             >
               <div className="blog-card-one">
                 <div className="blog-card-one__image">
-                  <img src="assets/images/blog/blog-1-1.jpg" alt="" />
-                  <Link to="/blog-details"></Link>
+                  <img src={designl} alt="designs" />
+                  <Link to="/web-design"></Link>
                 </div>
                 <div className="blog-card-one__content">
                   <div className="blog-card-one__meta">
                     <div className="blog-card-one__date">
                       <i className="fa fa-calendar-alt" aria-hidden="true"></i>
-                      July, 25, 2022
+                      Jan, 10, 2023
                     </div>
-                    <Link to="/blog" className="blog-card-one__category">
+                    {/* <Link to="/blog" className="blog-card-one__category">
                       Designer
-                    </Link>
+                    </Link> */}
                   </div>
                   <h3 className="blog-card-one__title">
-                    <Link to="/blog-details">
-                      Web design done Delightful Visualization Examples
+                    <Link to="/web-design">
+                      "Key Elements for a Successful Web Design"
                     </Link>
                   </h3>
-                  <Link to="/blog-details" className="blog-card-one__more">
+                  <Link to="/web-design" className="blog-card-one__more">
                     Read More
                     <i className="fa fa-arrow-right"></i>
                   </Link>
@@ -859,25 +863,25 @@ const Home3 = () => {
             >
               <div className="blog-card-one">
                 <div className="blog-card-one__image">
-                  <img src="assets/images/blog/blog-1-2.jpg" alt="" />
-                  <Link to="/blog-details"></Link>
+                  <img src={cyberl} alt="cybers" />
+                  <Link to="/cyber"></Link>
                 </div>
                 <div className="blog-card-one__content">
                   <div className="blog-card-one__meta">
                     <div className="blog-card-one__date">
                       <i className="fa fa-calendar-alt" aria-hidden="true"></i>
-                      July, 25, 2022
+                      Jan, 10, 2023
                     </div>
-                    <Link to="/blog" className="blog-card-one__category">
+                    {/* <Link to="/blog" className="blog-card-one__category">
                       Graphic
-                    </Link>
+                    </Link> */}
                   </div>
                   <h3 className="blog-card-one__title">
-                    <Link to="/blog-details">
-                      Technology Support Allows Erie non-profit to Serve
+                    <Link to="/cyber">
+                      "Secure Bytes: Exploring the World of Cyber Security"
                     </Link>
                   </h3>
-                  <Link to="/blog-details" className="blog-card-one__more">
+                  <Link to="/cyber" className="blog-card-one__more">
                     Read More
                     <i className="fa fa-arrow-right"></i>
                   </Link>
@@ -891,25 +895,25 @@ const Home3 = () => {
             >
               <div className="blog-card-one">
                 <div className="blog-card-one__image">
-                  <img src="assets/images/blog/blog-1-3.jpg" alt="" />
-                  <Link to="/blog-details"></Link>
+                  <img src={logicl} alt="logicl" />
+                  <Link to="/appdev"></Link>
                 </div>
                 <div className="blog-card-one__content">
                   <div className="blog-card-one__meta">
                     <div className="blog-card-one__date">
                       <i className="fa fa-calendar-alt" aria-hidden="true"></i>
-                      July, 25, 2022
+                      Jan, 10, 2023
                     </div>
-                    <Link to="/blog" className="blog-card-one__category">
+                    {/* <Link to="/appdev" className="blog-card-one__category">
                       SEO
-                    </Link>
+                    </Link> */}
                   </div>
                   <h3 className="blog-card-one__title">
-                    <Link to="/blog-details">
-                      Software Makes Your Profit Double if You Scale Properly
+                    <Link to="/appdev">
+                      " Code Craft: Navigating the World of App Development"
                     </Link>
                   </h3>
-                  <Link to="/blog-details" className="blog-card-one__more">
+                  <Link to="/appdev" className="blog-card-one__more">
                     Read More
                     <i className="fa fa-arrow-right"></i>
                   </Link>
