@@ -767,7 +767,7 @@ const Home3 = () => {
                   </h2>
                 </div>
                 <form
-                  action={handleSubmit}
+                  onSubmit={handleSubmit}
                   className="contact-one__form contact-form-validated"
                 >
                   <div className="row ">
