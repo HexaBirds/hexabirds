@@ -128,7 +128,7 @@ const Contact = () => {
 
       <section className="google-map google-map--contact">
         <iframe
-          src="https://maps.google.com/maps?q=hisar&t=&z=10&ie=UTF8&iwloc=&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.011184463485!2d75.71673641548705!3d29.16434266656186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391233485fe2c1df%3A0x9cf583b1404cc87e!2sHexabirds!5e0!3m2!1sen!2sin!4v1678342677450!5m2!1sen!2sin"
           className="google-map__one"
           title="gmap"
           allowFullScreen
