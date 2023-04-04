@@ -9,12 +9,12 @@ import client1 from "../../assets/images/resources/client1.jpg";
 import aboutteam from "../../assets/images/resources/about-team.png";
 import poonam from "../../assets/images/resources/poonam.png";
 import servicebg from "../../assets/images/background/servicebg.png";
-import vikash from "../../assets/images/team/vikash.png";
-import nisha from "../../assets/images/team/Nisha.png";
-import sahil from "../../assets/images/team/sahil2.png";
-import joginder from "../../assets/images/team/joginder.png";
-import aashu from "../../assets/images/team/Aashu.png";
-import rakesh from "../../assets/images/team/rakesh.png";
+import vikash from "../../assets/images/team/vikash.webp";
+import nisha from "../../assets/images/team/Nisha.webp";
+import sahil from "../../assets/images/team/sahil2.webp";
+import joginder from "../../assets/images/team/joginder.webp";
+import aashu from "../../assets/images/team/Aashu.webp";
+import rakesh from "../../assets/images/team/rakesh.webp";
 const About = () => {
   const logoOptions = {
     loop: true,
